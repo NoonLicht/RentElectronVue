@@ -1,8 +1,8 @@
 <template>
   <div class="timeline">
     <div class="timeline-right" style="padding-left: 0px;">
-      <div class="album box">
-        <div class="album-content">
+      <div class="album-active box">
+        <div class="album-active-content">
           <ActiveRentMini />
         </div>
       </div>
@@ -56,23 +56,22 @@ export default {
   }
 }
 
-.album {
+.album-active {
 
-  padding-top: 20px;
   margin-top: 20px;
 }
 
-.album .status-main {
+.album-active .status-main {
   border: none;
   display: flex;
 }
 
-.album .intro-menu {
+.album-active .intro-menu {
   margin-bottom: auto;
   margin-top: 5px;
 }
 
-.album-detail {
+.album-active-detail {
   display: flex;
   width: calc(100% - 110px);
   font-size: 15px;
@@ -80,27 +79,26 @@ export default {
   align-items: flex-start;
 }
 
-.album-title span {
+.album-active-title span {
   color: #1771d6;
   cursor: pointer;
   font-size: 15px;
 }
 
-.album-date {
+.album-active-date {
   font-size: 15px;
   color: #595c6c;
   margin-top: 4px;
 }
 
-.album-content {
+.album-active-content {
   display: flex;
   font-size: 20px;
-  padding: 0 20px 20px;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.album-photo {
+.album-active-photo {
   width: 100%;
   object-fit: cover;
   object-position: center;
@@ -108,17 +106,17 @@ export default {
   margin-top: 10px;
 }
 
-.album-photos {
+.album-active-photos {
   display: flex;
   margin-top: 20px;
   max-height: 30vh;
 }
 
-.album-photos>.album-photo {
+.album-active-photos>.album-active-photo {
   width: 50%;
 }
 
-.album-right {
+.album-active-right {
   width: 50%;
   margin-left: 10px;
   line-height: 0;
@@ -126,11 +124,11 @@ export default {
   flex-direction: column;
 }
 
-.album-right .album-photo {
+.album-active-right .album-active-photo {
   height: calc(50% - 10px);
 }
 
-.album-actions {
+.album-active-actions {
   display: flex;
   font-size: 20px;
   padding: 0 20px 20px;
@@ -138,7 +136,7 @@ export default {
   align-items: flex-start;
 }
 
-.album-action {
+.album-active-action {
   margin-right: 20px;
   text-decoration: none;
   color: #a2a4b4;
@@ -147,11 +145,11 @@ export default {
   font-weight: 600;
 }
 
-.album-action:hover {
+.album-active-action:hover {
   color: #000000;
 }
 
-.album-action svg {
+.album-active-action svg {
   width: 16px;
   margin-right: 6px;
 }

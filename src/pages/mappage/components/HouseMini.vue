@@ -1,13 +1,13 @@
 <template>
   <div class="content-mini">
-    <div class="product-card" @click="handleModify">
+    <div class="product-card">
       <div class="image-card">
         <img src="@/assets/img/1.jpg" alt="product-image" />
       </div>
       <div class="left-details">
         <div class="product-header">
           <header class="product-title">
-            <router-link to="/object">
+            <router-link to="/estate">
               <h4>"Прибрежная Идиллия"</h4>
             </router-link>
           </header>
@@ -40,19 +40,6 @@
   </div>
 
 </template>
-
-<script>
-export default {
-  methods: {
-    handleModify(event) {
-      const popup = document.querySelector('.popup-wrapper');
-      popup.style.display = popup.style.display === 'none' ? 'block' : 'none';
-      popup.style.top = `${event.clientY - event.offsetY - 17}px`;
-      popup.style.left = `${event.clientX - event.offsetX - 270}px`;
-    }
-  }
-}
-</script>
 
 <style scoped>
 @import '@/assets/css/content.css';

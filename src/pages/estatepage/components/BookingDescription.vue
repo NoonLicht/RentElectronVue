@@ -1,7 +1,7 @@
 <!-- src/pages/blogspage/BlogsPage.vue -->
 <template>
   <div>
-    <h1>Estate Page</h1>
+    <h1>Blogs Page</h1>
   </div>
 </template>
 

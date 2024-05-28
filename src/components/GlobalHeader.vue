@@ -7,15 +7,9 @@
       <div id="mainListDiv" class="main_list" :class="{ 'show_list': isMenuOpen }">
         <ul class="navlinks">
           <li><router-link to="/">Home</router-link></li>
-          <!-- Используем router-link для перехода на главную страницу -->
           <li><router-link to="/map">Map</router-link></li>
-          <!-- Используем router-link для перехода на страницу карты -->
-          <li><router-link to="/about">About</router-link></li>
-          <!-- Пример для другой страницы, которой у вас может не быть -->
           <li><router-link to="/login">Login</router-link></li>
-          <!-- Пример для другой страницы, которой у вас может не быть -->
           <li><router-link to="/profile">Profile</router-link></li>
-          <!-- Пример для другой страницы, которой у вас может не быть -->
         </ul>
       </div>
       <span class="navTrigger" @click="toggleMenu" :class="{ 'active': isMenuOpen }">

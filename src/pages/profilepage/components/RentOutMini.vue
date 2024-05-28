@@ -28,25 +28,86 @@
         </div>
         <div class="right-details">
           <div class="reviews">
-            <span class="type">4.5<div class="star"></div></span>
+            <span class="type">0.0<div class="star"></div></span>
             <span class="type"></span>
           </div>
           <div class="price-details">
-            <span class="type">с 31.05.24 по 30.06.24</span>
-            <span class="type">30 дней </span>
-            <span class="type">&nbsp; </span>
-
             <span class="price" style="color: red;">7 800 ₽</span>
             <span class="type">за сутки</span>
-
-            <span class="price" style="color: red;">234 000 ₽</span>
-            <span class="type">за все время</span>
           </div>
+        </div>
+      </div>
+      <div class="down-details">
+        <div class="down-statistic">
+          <canvas ref="chart"></canvas>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+
+<script>
+import Chart from 'chart.js/auto';
+
+export default {
+  data() {
+    return {
+      chart: null,
+    };
+  },
+  mounted() {
+    const today = new Date();
+    const formattedToday = today.toLocaleDateString('ru-RU', { day: 'numeric', month: 'long' });
+
+    const numDays = 7; // количество дней, которое должно отображаться на графике
+    const labels = [formattedToday]; // массив меток для оси X
+    for (let i = 1; i < numDays; i++) {
+      const nextDay = new Date(today.getTime() + i * 24 * 60 * 60 * 1000); // добавляем i дней к текущей дате
+      const formattedNextDay = nextDay.toLocaleDateString('ru-RU', { day: 'numeric', month: 'long' });
+      labels.push(formattedNextDay);
+    }
+
+    this.chart = new Chart(this.$refs.chart, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'Просмотры',
+          data: [0, 0, 0, 0, 0, 0, 0],
+          backgroundColor: 'rgba(75, 192, 192, 0.2)',
+          borderColor: 'rgba(75, 192, 192, 1)',
+          borderWidth: 1,
+          fill: false,
+          tension: 0,
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              stepSize: 1,
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            display: false,
+          },
+        },
+      },
+    });
+  },
+  beforeUnmount() {
+    this.chart.destroy();
+  },
+}
+
+</script>
+
 
 
 <style scoped>

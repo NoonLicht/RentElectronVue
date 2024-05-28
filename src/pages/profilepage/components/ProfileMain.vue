@@ -16,7 +16,7 @@
   </div>
 </template>
 
-<style scoped>
+<style >
 
 a {
   font-size: 14px;
