@@ -87,23 +87,31 @@ CREATE TABLE real_estate_description (
 
 Особенности дома
 ```
-CREATE TABLE house_features (
+CREATE TABLE features (
     id SERIAL PRIMARY KEY,
-    id_real_estate_base INT REFERENCES real_estate_base(id),
-    feature TEXT
+    name VARCHAR(255)
 );
 ```
 
-Особенности территоррии
+Недвижимость особенности дома
 ```
-CREATE TABLE territory_features (
+CREATE TABLE real_estate_house_features (
     id SERIAL PRIMARY KEY,
     id_real_estate_base INT REFERENCES real_estate_base(id),
-    feature TEXT
+    id_feature INT REFERENCES features(id)
 );
 ```
 
-Недвижимость для фильтров
+Недвижимость особенности на территории
+```
+CREATE TABLE real_estate_territory_features (
+    id SERIAL PRIMARY KEY,
+    id_real_estate_base INT REFERENCES real_estate_base(id),
+    id_feature INT REFERENCES features(id)
+);
+```
+
+Недвижимость фильтры
 ```
 CREATE TABLE real_estate_filters (
     id SERIAL PRIMARY KEY,
@@ -114,10 +122,8 @@ CREATE TABLE real_estate_filters (
     number_beds_double INT,
     number_bedrooms INT,
     area DECIMAL(10, 2),
-    floor INT,
-    on_the_house TEXT,
-    on_the_territory TEXT,
-    features TEXT
+    floor INT
 );
 ```
+
 
