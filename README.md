@@ -35,10 +35,10 @@ CREATE TABLE users (
     date_registered DATE,
     avatar_src VARCHAR(255)
 );
-'''
+```
 
 Контент пользователей
-'''
+```
 CREATE TABLE user_content (
     id SERIAL PRIMARY KEY,
     id_user INT REFERENCES users(id),
