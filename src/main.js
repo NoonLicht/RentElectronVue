@@ -10,3 +10,5 @@ const app = createApp(App);
 app.use(router).use(store); // используем роутер
 app.component('GlobalHeader', GlobalHeader); // регистрируем компонент навигации
 app.mount('#app');
+
+
