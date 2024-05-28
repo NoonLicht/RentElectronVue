@@ -137,11 +137,11 @@ label {
 }
 
 #gallery-img {
-  border-radius: 30px;
+  border-radius: 1rem;
   transition: 0.3s ease-in-out;
   object-fit: cover;
   width: 100%;
-  height: 500px !important;
+  height: 480px !important;
 }
 
 .gallery-thumbnails {
@@ -152,7 +152,7 @@ label {
   white-space: nowrap;
   width: 100%;
   background: rgba(255, 255, 255, 0.1);
-  margin-top: 15px;
+  margin-top: 0px;
 }
 
 .gallery-thumbnails:hover {

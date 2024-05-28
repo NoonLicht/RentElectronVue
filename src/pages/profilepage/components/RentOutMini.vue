@@ -31,6 +31,14 @@
             <span class="type">0.0<div class="star"></div></span>
             <span class="type"></span>
           </div>
+          <div class="button-edit" style="display: flex; flex-direction: column;">
+          <button class="edit">
+            Изменить
+          </button>
+          <button class="delete">
+            Удалить
+          </button>
+          </div>
           <div class="price-details">
             <span class="price" style="color: red;">7 800 ₽</span>
             <span class="type">за сутки</span>
@@ -112,6 +120,28 @@ export default {
 
 <style scoped>
 /* @import '@/assets/css/content.css'; */
+
+.edit, .delete {
+  border-radius: .5rem;
+  border: none;
+  background-color: #709bea;
+  color: #FFFFFF;
+  font-size: 10px;
+  margin: 5px;
+  font-weight: bold;
+  padding: 6px 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0px 0px 11px 0px rgba(34, 60, 80, 0.2);
+  transition: transform 80ms ease-in;
+}
+
+.edit:active,
+.delete:active {
+  transform: scale(0.95);
+  box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2) inset;
+}
+
 .content-mini-active {
   width: 100%;
   height: auto;

@@ -22,14 +22,11 @@
           <div class="booking-maps">
             <BookingMaps />
           </div>
-          <div class="booking-info">
-            <BookingInfo />
-          </div>
         </div>
       </div>
       <div class="rightside">
         <div class="sidebar">
-
+          <PriceObject />
         </div>
       </div>
 
@@ -45,7 +42,7 @@ import BookingRules from './components/BookingRules';
 import BookingFeatures from './components/BookingFeatures';
 import BookingReviews from './components/BookingReviews';
 import BookingMaps from './components/BookingMaps';
-import BookingInfo from './components/BookingInfo';
+import PriceObject from './components/PriceObject';
 
 
 
@@ -58,7 +55,7 @@ export default {
     BookingFeatures,
     BookingReviews,
     BookingMaps,
-    BookingInfo,
+    PriceObject
   }
 }
 
@@ -88,13 +85,24 @@ export default {
 }
 
 .leftside {
-  height: 100vh;
-  background-color: aqua;
+  height: auto;
+  padding: 10px;
+  box-shadow: 0px 0px 11px 0px rgba(34, 60, 80, 0.2);
+  border-radius: 1rem;
 }
 
 .rightside {
-  height: 100vh;
-    background-color: rgb(255, 0, 0);
+  padding: 20px;
+  margin-top: 65px;
+  position: fixed;
+    top: 0;
+    right: 10%;
+    width: 25%;
+    /* Ширина блока */
+    height: auto;
+    box-shadow: 0px 0px 11px 0px rgba(34, 60, 80, 0.2);
+    overflow-y: auto;
+    /* Разрешить вертикальную прокрутку внутри блока */
 }
 
 .main-block,
@@ -106,4 +114,40 @@ export default {
   width: 100%;
   height: 600px;
 }
+.booking-description {
+  
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content:center;
+  box-shadow: 0px 0px 11px 0px rgba(34, 60, 80, 0.2);
+    border-radius: 1rem;
+}
+
+.booking-rules {
+  margin-top: 20px;
+  box-shadow: 0px 0px 11px 0px rgba(34, 60, 80, 0.2);
+    border-radius: 1rem;
+}
+
+.booking-features {
+  margin-top: 20px;
+  box-shadow: 0px 0px 11px 0px rgba(34, 60, 80, 0.2);
+    border-radius: 1rem;
+}
+
+.booking-reviews {
+  margin-top: 20px;
+  box-shadow: 0px 0px 11px 0px rgba(34, 60, 80, 0.2);
+    border-radius: 1rem;
+}
+
+.booking-maps {
+  margin-top: 20px;
+  width: 100%;
+  height: 400px;
+  box-shadow: 0px 0px 11px 0px rgba(34, 60, 80, 0.2);
+    margin-bottom: 50px;
+}
+
 </style>
