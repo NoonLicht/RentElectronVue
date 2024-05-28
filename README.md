@@ -129,6 +129,16 @@ CREATE TABLE real_estate_filters (
 
 Добавление данных
 ```
+-- Добавление данных в таблицу features
+INSERT INTO features (name)
+VALUES 
+    ('Сад'),
+    ('Вид на море'),
+    ('Балкон'),
+    ('Парковка'),
+    ('Бассейн');
+
+
 -- Добавление данных о пользователе
 INSERT INTO users (full_name, username, password, date_registered, avatar_src)
 VALUES 
