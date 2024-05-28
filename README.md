@@ -33,7 +33,8 @@ CREATE TABLE users (
     username VARCHAR(255),
     password VARCHAR(255),
     date_registered DATE,
-    avatar_src VARCHAR(255)
+    avatar_src VARCHAR(255),
+    email VARCHAR(255)
 );
 ```
 
